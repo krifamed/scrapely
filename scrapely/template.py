@@ -36,8 +36,9 @@ class TemplateMaker(object):
         """
         indexes = self.select(score_func)
         if not indexes:
-            raise FragmentNotFound("Fragment not found annotating %r using: %s" %
-                (field, score_func))
+            pass
+            # raise FragmentNotFound("Fragment not found annotating %r using: %s" %
+            #     (field, score_func))
         if best_match:
             del indexes[1:]
         for i in indexes:
